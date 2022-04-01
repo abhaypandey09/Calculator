@@ -5,71 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Baba Calculator</title>
-    <style>
-      h1 {
-        text-align: center;
-        font-size: 60px;
-        color: teal;
-        margin-top: 20px;
-      }
-      #calculator{
-        width: 400px;
-        height: 500px;
-        box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, 
-        rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
-        margin: auto;
-        border-radius: 10px;
-        padding: 40px;
-
-      }
-      #input{
-        width: 90%;
-        height: 15%;
-        box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, 
-        rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
-        margin-top: 20px;
-        border-radius: 10px;
-        margin: auto;
-        margin-bottom: 50px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 40px;
-      }
-      #keyboard{
-        width: 90%; 
-        display: grid;
-        grid-template-columns:repeat(4,80px);
-        grid-template-rows: repeat(4,80px);
-        gap: 15px;
-        margin: auto;
-      }
-      #keyboard>div{
-        box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, 
-        rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
-        border-radius: 50px;
-        justify-content: center;
-        align-items: center;
-        display: flex;
-        font-size: 20px;
-        font-weight: bold;
-        cursor: pointer;
-      }
-      #keyboard>div:hover{
-        background-color: blue;
-      }
-      .operation{
-        background-color: black;
-        color: white;
-      }
-      .red{
-        background-color: red;
-        color: white;
-      }
-      
-
-      /* use grid to acheive the layout */
-    </style>
+    <link rel="stylesheet" href="index.css">
   </head>
   <body>
     <h1>Baba Calculator</h1>
@@ -96,23 +32,4 @@
     </div>
   </body>
 </html>
-<script>
-  var nums=document.querySelectorAll("#keyboard>div");
-  var bag=document.querySelector("#input");
-  for(var i=0;i<nums.length;i++){
-    nums[i].addEventListener("click",mycalculator);
-  }
-  function mycalculator(){
-    var targetNumber=event.target.innerText;
-    switch(targetNumber){
-      case "C":
-        bag.innerText="";
-        break;
-      case "=":
-        bag.innerText=eval(bag.innerText);
-        break;
-      default:
-        bag.innerText += targetNumber;  
-    }
-  }
-</script>
+<script src="index.js"></script>
